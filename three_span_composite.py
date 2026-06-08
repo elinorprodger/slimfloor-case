@@ -7,7 +7,6 @@
 #  RC solid and composite slabs are analysed as three-span continuous beams.
 #  Timber slabs and RC ribbed stay simply-supported (continuous not implemented).
 #
-#  NOTE: composite slab results exclude acoustic checks (not yet implemented).
 # =============================================================================
 
 import struct_analysis  # structural analysis
@@ -36,7 +35,7 @@ max_iter = 100                         # iterations per optimisation (higher = b
 #   "industrial"   → EN 1991-1-1 Cat. E1  qk = 7.5 kN/m²
 use_case = "office"
 
-criteria = ["FIRE"]   # design envelope to satisfy (e.g. "ULS", "SLS", "FIRE")
+criteria = ["ENV"]   # design envelope to satisfy (e.g. "ULS", "SLS", "FIRE")
 optima   = ["GWP"]    # quantity to minimise
 
 # ── FIRE REQUIREMENT ───────────────────────────────────────────────────────

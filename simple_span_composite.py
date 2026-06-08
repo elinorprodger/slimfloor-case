@@ -4,7 +4,6 @@
 #  Optimises composite steel-concrete, RC and timber slab cross-sections for
 #  minimum GWP across a range of simply-supported spans.
 #
-#  NOTE: composite slab results exclude acoustic checks (not yet implemented).
 # =============================================================================
 
 import struct_analysis  # structural analysis
@@ -31,9 +30,9 @@ max_iter = 100                         # iterations per optimisation (higher = b
 #   "office"       → EN 1991-1-1 Cat. B   qk = 3.0 kN/m²  + 1.0 kN/m² partitions
 #   "retail"       → EN 1991-1-1 Cat. D1  qk = 4.0 kN/m²
 #   "industrial"   → EN 1991-1-1 Cat. E1  qk = 7.5 kN/m²
-use_case = "industrial"
+use_case = "office"
 
-criteria = ["FIRE"]   # design envelope to satisfy (e.g. "ULS", "SLS", "FIRE")
+criteria = ["ENV"]   # design envelope to satisfy (e.g. "ULS", "SLS", "FIRE")
 optima   = ["GWP"]    # quantity to minimise
 
 # ── FIRE REQUIREMENT ───────────────────────────────────────────────────────
